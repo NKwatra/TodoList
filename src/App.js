@@ -5,6 +5,7 @@ import AddTodo from "./AddTodo"
 import VisibleTodoList from "./containers/VisibleTodoList"
 import {Provider} from "react-redux";
 import store from "./redux/store"
+import TasksFilter from "./TasksFilter"
 
 function App() {
   return (
@@ -14,11 +15,11 @@ function App() {
         <div className="col-8 offset-2">
           <AddTodo />
           <VisibleTodoList/>
+          <TasksFilter/>
         </div>
       </div>
     </div>
     </Provider>
-    
   );
 }
 

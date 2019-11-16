@@ -3,8 +3,11 @@ import Todo from "./Todo"
 
 const TodoList = ({todos, onClickTodo}) => 
 {
-	console.log(onClickTodo)
-	return (todos.map((todo, index) => (<Todo {...todo} onClick={() => onClickTodo(index)} key={index} />)));
+	return (
+		<div className="todo-list">
+		{todos.map((todo, index) => (<Todo {...todo} onClick={() => onClickTodo(index)} key={index} />))}
+		</div>
+		);
 }
 
 export default TodoList

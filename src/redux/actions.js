@@ -1,6 +1,6 @@
 export const ADD_TODO = 'addTodo';
 export const TOGGLE_TODO = 'toggleTodo';
-export const CHANGE_FILTER = "visibilityFilter";
+export const CHANGE_FILTER = "visibilityFilterChange";
 export const TODO_COMPLETED = "done";
 export const TODO_TASK ="task"
 export const VISIBILITY_FILTER = "visibilityFilter"
