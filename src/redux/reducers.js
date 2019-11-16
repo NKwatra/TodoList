@@ -1,4 +1,4 @@
-import {ADD_TODO, TOGGLE_TODO, CHANGE_FILTER, TODO_COMPLETED, VISIBILITY_FILTER, TODOS,VISIBILITY_ALL} from "./action"
+import {ADD_TODO, TOGGLE_TODO, CHANGE_FILTER, TODO_COMPLETED, VISIBILITY_FILTER, TODOS,VISIBILITY_ALL} from "./actions"
 import {combineReducers} from 'redux';
 
 const todoReducer = (state = [], action) => {
@@ -7,13 +7,13 @@ const todoReducer = (state = [], action) => {
 		return [...state, action.payload]
 	} else if (action.type === TOGGLE_TODO)
 	{
-		return (state.map((todo, index) => {
+		return state.map((todo, index) => {
 			if(index === action.payload)
 			{
 				return {...todo, [TODO_COMPLETED] : !todo[TODO_COMPLETED]}
 			}
 			return todo;
-		}));
+		})
 	}else
 	{
 		return state
